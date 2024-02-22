@@ -18,18 +18,18 @@ const Myskill = [
 		HTML: "100%",
 		CSS: "90%",
 		JavaScript: "80%",
-		TypeScript: "80%",
+		TypeScript: "60%",
 		BootStrap: "80%",
-		Reactjs:"80%",
-		Nextjs:"80%",
+		Reactjs:"90%",
+		Nextjs:"70%",
 		jQuery: "80%",
 		Nodejs: "80%",
 		Expressjs: "80%",
 		EJS: "80%",
 		Git: "80%",
 		API: "80%",
-		PostgreSQL: "80%",
-		MongoDB: "80%",
+		PostgreSQL: "90%",
+		MongoDB: "90%",
 		Firebase: "80%",
 	},
 ];
@@ -96,81 +96,74 @@ const Myskill = [
 												<div className="bg-blue-600 h-2.5 rounded-full" style={{ width: s.BootStrap }}></div>
 											</div>
 											<div className="flex justify-between mb-1">
-												<span className="text-base font-medium text-blue-700 dark:text-white">React</span>
-												<span className="text-sm font-medium text-blue-700 dark:text-white">{s.React}</span>
+												<span className="text-base font-medium text-blue-700 dark:text-white">Nodejs</span>
+												<span className="text-sm font-medium text-blue-700 dark:text-white">{s.Nodejs}</span>
 											</div>
 											<div className="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700">
-												<div className="bg-blue-600 h-2.5 rounded-full" style={{ width: s.React }}></div>
+												<div className="bg-blue-600 h-2.5 rounded-full" style={{ width: s.Nodejs }}></div>
 											</div>
 											<div className="flex justify-between mb-1">
-												<span className="text-base font-medium text-blue-700 dark:text-white">React</span>
-												<span className="text-sm font-medium text-blue-700 dark:text-white">{s.React}</span>
+												<span className="text-base font-medium text-blue-700 dark:text-white">Nextjs</span>
+												<span className="text-sm font-medium text-blue-700 dark:text-white">{s.Nextjs}</span>
 											</div>
 											<div className="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700">
-												<div className="bg-blue-600 h-2.5 rounded-full" style={{ width: s.React }}></div>
+												<div className="bg-blue-600 h-2.5 rounded-full" style={{ width: s.Nextjs }}></div>
 											</div>
 											<div className="flex justify-between mb-1">
-												<span className="text-base font-medium text-blue-700 dark:text-white">React</span>
-												<span className="text-sm font-medium text-blue-700 dark:text-white">{s.React}</span>
+												<span className="text-base font-medium text-blue-700 dark:text-white">jQuery</span>
+												<span className="text-sm font-medium text-blue-700 dark:text-white">{s.jQuery}</span>
 											</div>
 											<div className="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700">
-												<div className="bg-blue-600 h-2.5 rounded-full" style={{ width: s.React }}></div>
+												<div className="bg-blue-600 h-2.5 rounded-full" style={{ width: s.jQuery }}></div>
 											</div>
 											<div className="flex justify-between mb-1">
-												<span className="text-base font-medium text-blue-700 dark:text-white">React</span>
-												<span className="text-sm font-medium text-blue-700 dark:text-white">{s.React}</span>
+												<span className="text-base font-medium text-blue-700 dark:text-white">Expressjs</span>
+												<span className="text-sm font-medium text-blue-700 dark:text-white">{s.Expressjs}</span>
 											</div>
 											<div className="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700">
-												<div className="bg-blue-600 h-2.5 rounded-full" style={{ width: s.React }}></div>
+												<div className="bg-blue-600 h-2.5 rounded-full" style={{ width: s.Expressjs }}></div>
 											</div>
 											<div className="flex justify-between mb-1">
-												<span className="text-base font-medium text-blue-700 dark:text-white">React</span>
-												<span className="text-sm font-medium text-blue-700 dark:text-white">{s.React}</span>
+												<span className="text-base font-medium text-blue-700 dark:text-white">EJS</span>
+												<span className="text-sm font-medium text-blue-700 dark:text-white">{s.EJS}</span>
 											</div>
 											<div className="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700">
-												<div className="bg-blue-600 h-2.5 rounded-full" style={{ width: s.React }}></div>
+												<div className="bg-blue-600 h-2.5 rounded-full" style={{ width: s.EJS }}></div>
 											</div>
 											<div className="flex justify-between mb-1">
-												<span className="text-base font-medium text-blue-700 dark:text-white">React</span>
-												<span className="text-sm font-medium text-blue-700 dark:text-white">{s.React}</span>
+												<span className="text-base font-medium text-blue-700 dark:text-white">Git</span>
+												<span className="text-sm font-medium text-blue-700 dark:text-white">{s.Git}</span>
 											</div>
 											<div className="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700">
-												<div className="bg-blue-600 h-2.5 rounded-full" style={{ width: s.React }}></div>
+												<div className="bg-blue-600 h-2.5 rounded-full" style={{ width: s.Git }}></div>
 											</div>
 											<div className="flex justify-between mb-1">
-												<span className="text-base font-medium text-blue-700 dark:text-white">React</span>
-												<span className="text-sm font-medium text-blue-700 dark:text-white">{s.React}</span>
+												<span className="text-base font-medium text-blue-700 dark:text-white">API</span>
+												<span className="text-sm font-medium text-blue-700 dark:text-white">{s.API}</span>
 											</div>
 											<div className="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700">
-												<div className="bg-blue-600 h-2.5 rounded-full" style={{ width: s.React }}></div>
+												<div className="bg-blue-600 h-2.5 rounded-full" style={{ width: s.API }}></div>
 											</div>
 											<div className="flex justify-between mb-1">
-												<span className="text-base font-medium text-blue-700 dark:text-white">React</span>
-												<span className="text-sm font-medium text-blue-700 dark:text-white">{s.React}</span>
+												<span className="text-base font-medium text-blue-700 dark:text-white">PostgreSQL</span>
+												<span className="text-sm font-medium text-blue-700 dark:text-white">{s.PostgreSQL}</span>
 											</div>
 											<div className="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700">
-												<div className="bg-blue-600 h-2.5 rounded-full" style={{ width: s.React }}></div>
+												<div className="bg-blue-600 h-2.5 rounded-full" style={{ width: s.PostgreSQL }}></div>
 											</div>
 											<div className="flex justify-between mb-1">
-												<span className="text-base font-medium text-blue-700 dark:text-white">React</span>
-												<span className="text-sm font-medium text-blue-700 dark:text-white">{s.React}</span>
+												<span className="text-base font-medium text-blue-700 dark:text-white">MongoDB</span>
+												<span className="text-sm font-medium text-blue-700 dark:text-white">{s.MongoDB}</span>
 											</div>
 											<div className="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700">
-												<div className="bg-blue-600 h-2.5 rounded-full" style={{ width: s.React }}></div>
+												<div className="bg-blue-600 h-2.5 rounded-full" style={{ width: s.MongoDB }}></div>
 											</div>
 											<div className="flex justify-between mb-1">
-												<span className="text-base font-medium text-blue-700 dark:text-white">React</span>
-												<span className="text-sm font-medium text-blue-700 dark:text-white">{s.React}</span>
+												<span className="text-base font-medium text-blue-700 dark:text-white">Firebase</span>
+												<span className="text-sm font-medium text-blue-700 dark:text-white">{s.Firebase}</span>
 											</div>
 											<div className="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700">
-												<div className="bg-blue-600 h-2.5 rounded-full" style={{ width: s.React }}></div>
-											</div>
-											<div className="flex justify-between mb-1">
-												<span className="text-base font-medium text-blue-700 dark:text-white">React</span>
-												<span className="text-sm font-medium text-blue-700 dark:text-white">{s.React}</span>
-											</div>
-											<div className="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700">
-												<div className="bg-blue-600 h-2.5 rounded-full" style={{ width: s.React }}></div>
+												<div className="bg-blue-600 h-2.5 rounded-full" style={{ width: s.Firebase }}></div>
 											</div>
 										</span>
 									</div>
