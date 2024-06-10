@@ -5,38 +5,39 @@ import { Card } from "../components/card";
 
 const socials = [
 	{
-		href: "https://twitter.com/Bosszar3",
-		label: "Codesandbox",
-		handle: "Secrets-web",
+		href: "https://github.com/MrAlex1199/My-Capstone-Project-NASA-ROVER-Photo-by-NASA-API",
+		label: "github",
+		handle: "ROVER SEARCH",
 	},
 	{
-		href: "https://twitter.com/Bosszar3",
-		label: "Codesandbox",
-		handle: "Secrets-web",
+		href: "https://github.com/MrAlex1199/IFIXPC",
+		label: "github",
+		handle: "IFIX-PC",
 	},
 	{
-		href: "https://twitter.com/Bosszar3",
-		label: "Codesandbox",
-		handle: "Secrets-web",
+		href: "https://github.com/MrAlex1199/MrAlexMY-Web-ECom",
+		label: "github",
+		handle: "MY-Web-ECom",
+
 	},
 	{
-		href: "https://twitter.com/Bosszar3",
-		label: "Codesandbox",
-		handle: "Secrets-web",
+		href: "https://github.com/MrAlex1199/My-Resume-wab-site",
+		label: "github",
+		handle: "My-Resume-wab-site",
 	},
 	{
-		href: "https://twitter.com/Bosszar3",
-		label: "Codesandbox",
-		handle: "Secrets-web",
+		href: "https://github.com/MrAlex1199/Projects-Capstone-3-Notebook",
+		label: "github",
+		handle: "Notebook-wab-app",
 	},
 	{
-		href: "https://twitter.com/Bosszar3",
-		label: "Codesandbox",
+		href: "https://github.com/MrAlex1199/9.6-Secrets-Project",
+		label: "github",
 		handle: "Secrets-web",
 	},
 ];
 
-export default function Example() {
+export default function Project() {
 	return (
 		<div className=" bg-gradient-to-tl from-zinc-900/0 via-zinc-900 to-zinc-900/0">
 			<Navigation />
