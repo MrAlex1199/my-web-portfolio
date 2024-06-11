@@ -1,7 +1,6 @@
 "use client";
-import Link from "next/link";
 import { Navigation } from "../components/nav";
-import { CardAbout } from "../components/cardabout";
+import { Card } from "../components/card";
 
 const socials = [
     {
@@ -12,8 +11,9 @@ const socials = [
 
 const skills = {
     HTML: "100%",
-    CSS: "90%",
-    JavaScript: "80%",
+    CSS: "100%",
+    TailwindCSS: "100%",
+    JavaScript: "100%",
     TypeScript: "60%",
     BootStrap: "80%",
     Reactjs: "90%",
@@ -36,7 +36,7 @@ export default function About() {
             <div className="container flex items-center justify-center min-h-screen px-4 mx-auto mt-20">
                 <div className="grid w-full grid-cols-1 gap-8 mx-auto mt-32 sm:mt-0 lg:gap-16">
                     {socials.map((social) => (
-                        <CardAbout key={social.handle}>
+                        <Card key={social.handle}>
                             <div className="p-4 relative flex flex-col items-center gap-4 duration-700 group md:gap-8 md:py-24 lg:pb-48 md:p-16">
                                 <div className="z-10 flex flex-col items-center">
                                     <span className="lg:text-xl font-medium duration-150 xl:text-3xl text-zinc-200 group-hover:text-white font-display">
@@ -47,9 +47,9 @@ export default function About() {
                                     </span>
                                 </div>
                             </div>
-                        </CardAbout>
+                        </Card>
                     ))}
-                    <CardAbout>
+                    <Card>
                         <div className="p-4 relative flex flex-col items-center gap-4 duration-700 group md:gap-8 md:py-24 md:p-16">
                             <div className="z-10 flex flex-col w-full items-center">
                                 <span className="lg:text-xl font-medium duration-150 xl:text-3xl text-zinc-200 group-hover:text-white font-display">
@@ -70,7 +70,7 @@ export default function About() {
                                 </div>
                             </div>
                         </div>
-                    </CardAbout>
+                    </Card>
                 </div>
             </div>
         </div>
