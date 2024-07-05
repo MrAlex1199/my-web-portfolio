@@ -3,37 +3,37 @@ import Link from "next/link";
 import { Navigation } from "../components/nav";
 import { Card } from "../components/card";
 
-const socials = [
+const Projects = [
 	{
-		href: "https://github.com/MrAlex1199/My-Capstone-Project-NASA-ROVER-Photo-by-NASA-API",
+		href: "/roversearch",
 		label: "github",
-		handle: "ROVER SEARCH",
+		handle: "ROVER-SEARCH",
 	},
 	{
-		href: "https://github.com/MrAlex1199/IFIXPC",
+		href: "/ifixpc",
 		label: "github",
 		handle: "IFIX-PC",
 	},
 	{
-		href: "https://github.com/MrAlex1199/MrAlexMY-Web-ECom",
+		href: "/mywebecom",
 		label: "github",
 		handle: "MY-Web-ECom",
 
 	},
 	{
-		href: "https://github.com/MrAlex1199/My-Resume-wab-site",
+		href: "/nextjsresume",
 		label: "github",
-		handle: "My-Resume-wab-site",
+		handle: "NEXT-JS-RESUME",
 	},
 	{
-		href: "https://github.com/MrAlex1199/Projects-Capstone-3-Notebook",
+		href: "/bookreview",
 		label: "github",
-		handle: "Notebook-wab-app",
+		handle: "BOOK-REVIEW",
 	},
 	{
-		href: "https://github.com/MrAlex1199/9.6-Secrets-Project",
+		href: "/todolist",
 		label: "github",
-		handle: "Secrets-web",
+		handle: "TODO-LIST",
 	},
 ];
 
@@ -43,8 +43,8 @@ export default function Project() {
 			<Navigation />
 			<div className="container flex items-center justify-center min-h-screen px-4 mx-auto mt-10">
 				<div className="grid w-full grid-cols-1 gap-8 mx-auto mt-32 sm:mt-0 sm:grid-cols-3 lg:gap-16">
-					{socials.map((s) => (
-						<Card>
+					{Projects.map((s , index) => (
+						<Card key={index}>
 							<Link
 								href={s.href}
 								target="_blank"
