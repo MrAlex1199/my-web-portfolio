@@ -6,16 +6,16 @@ import { Card } from "../components/card";
 
 const P_info = [
 	{
-		href: "https://github.com/MrAlex1199/Projects-Capstone-3-Notebook-Public.git",
-		label: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. ",
+		href: "https://projects-capstone-3-notebook-public.onrender.com",
+		label: "This user-centric web application empowers anyone to discover and review books seamlessly. The intuitive interface, built with HTML ,CSS  and Bootstrap 5. fosters user engagement. The robust backend leverages the Node.js Express framework and a PostgreSQL database, ensuring scalability and efficient data management. This comprehensive platform fosters a vibrant community of book lovers and readers.",
 		handle: "BOOK-REVIEW",
-		imgs: "https://tailwindcss.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2F1.53652787.png&w=1920&q=90",
+		imgs: "/webexample/Nbook.jpg",
 	},
 ];
 
 const nav = [
 	{ 
-		name: "GitHub", href: "https://github.com/MrAlex1199/My-Capstone-Project-4--NASA-ROVER-Photo-by-NASA-API.git",
+		name: "GitHub", href: "https://github.com/MrAlex1199/Projects-Capstone-3-Notebook-Public.git",
 		icon: <Github size={20} />,
 	},
   ];

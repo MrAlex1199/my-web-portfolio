@@ -7,7 +7,7 @@ import { Card } from "../components/card";
 const P_info = [
 	{
 		href: "https://my-capstone-project-4-nasa-rover-photo.onrender.com",
-		label: "This web application facilitates the exploration of zimagery captured by NASA's four Mars rovers: Spirit, Opportunity, Curiosity, and Perseverance. The user interface is implemented with HTML and CSS, while the backend leverages Node.js Express framework. The application retrieves image data through NASA's public API, providing a user-friendly interface for browsing the extensive Martian photographic record.",
+		label: "This web application facilitates the exploration of imagery captured by NASA's four Mars rovers: Spirit, Opportunity, Curiosity, and Perseverance. The user interface is implemented with HTML and CSS, while the backend leverages the Node.js Express framework. The application retrieves image data through NASA's public API, providing a user-friendly interface for browsing the extensive Martian photographic record.",
 		handle: "ROVER-SEARCH",
 		imgs: "/webexample/RoverWeb.png",
 	},

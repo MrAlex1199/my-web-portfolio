@@ -7,15 +7,15 @@ import { Card } from "../components/card";
 const P_info = [
 	{
 		href: "https://github.com/MrAlex1199/MrAlexMY-Web-ECom.git",
-		label: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. ",
+		label: "This online retail platform caters to civilians seeking high-quality military-grade clothing and equipment. Built with React and Tailwind CSS for a dynamic and user-friendly experience, the website offers a comprehensive selection of products.  The secure login system, powered by a MongoDB database, ensures a seamless and trustworthy shopping experience.",
 		handle: "MY-Web-ECom",
-		imgs: "https://tailwindcss.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2F1.53652787.png&w=1920&q=90",
+		imgs: "/webexample/Ecom.jpg",
 	},
 ];
 
 const nav = [
 	{ 
-		name: "GitHub", href: "https://github.com/MrAlex1199/My-Capstone-Project-4--NASA-ROVER-Photo-by-NASA-API.git",
+		name: "GitHub", href: "https://github.com/MrAlex1199/MrAlexMY-Web-ECom.git",
 		icon: <Github size={20} />,
 	},
   ];

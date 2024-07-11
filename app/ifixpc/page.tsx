@@ -6,16 +6,16 @@ import { Card } from "../components/card";
 
 const P_info = [
 	{
-		href: "https://github.com/MrAlex1199/IFIXPC.git",
-		label: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. ",
+		href: "https://ifixpc.onrender.com",
+		label: "This web application empowers small and medium-sized enterprises (SMEs) with a user-friendly interface built using Bootstrap 5. The backend leverages the Node.js Express framework, ensuring scalability and efficiency. This comprehensive solution streamlines business management processes, allowing SMEs to focus on core competencies and growth.",
 		handle: "IFIX-PC",
-		imgs: "https://tailwindcss.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2F1.53652787.png&w=1920&q=90",
+		imgs: "/webexample/Ifixpc.jpg",
 	},
 ];
 
 const nav = [
 	{ 
-		name: "GitHub", href: "https://github.com/MrAlex1199/My-Capstone-Project-4--NASA-ROVER-Photo-by-NASA-API.git",
+		name: "GitHub", href: "https://github.com/MrAlex1199/IFIXPC.git",
 		icon: <Github size={20} />,
 	},
   ];

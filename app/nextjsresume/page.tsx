@@ -7,9 +7,9 @@ import { Card } from "../components/card";
 const P_info = [
 	{
 		href: "https://github.com/MrAlex1199/my-web-portfolio.git",
-		label: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. ",
+		label: "This responsive web experience showcases my skills and accomplishments through a carefully curated collection of projects. Built with Next.js and Tailwind CSS, the website delivers a seamless user experience across all devices, from desktop browsers to smartphones.",
 		handle: "NEXT-JS-RESUME",
-		imgs: "https://tailwindcss.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2F1.53652787.png&w=1920&q=90",
+		imgs: "/webexample/AlexPortfolio.jpg",
 	},
 ];
 

@@ -6,16 +6,16 @@ import { Card } from "../components/card";
 
 const P_info = [
 	{
-		href: "https://github.com/MrAlex1199/Projects-Capstone-2-ToDo-List-web-app---V2.git",
-		label: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. ",
+		href: "https://projects-capstone-2-todo-list-web-app-v2.onrender.com",
+		label: "This web-based application empowers users to manage their tasks efficiently. Built with HTML and CSS, it offers a responsive design that adapts seamlessly to any device, from smartphones to desktops. This user-friendly platform allows for clear organization and prioritization, boosting productivity and achieving goals. ",
 		handle: "TODO-LIST",
-		imgs: "https://tailwindcss.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2F1.53652787.png&w=1920&q=90",
+		imgs: "/webexample/todolist.jpg",
 	},
 ];
 
 const nav = [
 	{ 
-		name: "GitHub", href: "https://github.com/MrAlex1199/My-Capstone-Project-4--NASA-ROVER-Photo-by-NASA-API.git",
+		name: "GitHub", href: "https://github.com/MrAlex1199/Projects-Capstone-2-ToDo-List-web-app---V2.git",
 		icon: <Github size={20} />,
 	},
   ];
