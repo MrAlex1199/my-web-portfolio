@@ -9,7 +9,10 @@ const P_info = [
 		href: "https://github.com/MrAlex1199/MrAlexMY-Web-ECom.git",
 		label: "This online retail platform caters to civilians seeking high-quality military-grade clothing and equipment. Built with React and Tailwind CSS for a dynamic and user-friendly experience, the website offers a comprehensive selection of products.  The secure login system, powered by a MongoDB database, ensures a seamless and trustworthy shopping experience.",
 		handle: "MY-Web-ECom",
-		imgs: "/webexample/Ecom.jpg",
+		imgs1: "/webexample/Ecom.jpg",
+		imgs2: "/webexample/Ecom/about.jpg",
+		imgs3: "/webexample/Ecom/cart.jpg",
+		imgs4: "/webexample/Ecom/shop.jpg",
 	},
 ];
 
@@ -40,7 +43,10 @@ export default function mywebecom() {
 									<span className="mt-4 text-sm text-center duration-1000 text-zinc-400 group-hover:text-zinc-200">
 										{s.label}
 									</span>
-									<img className="mt-10 rounded duration-1000" src={s.imgs}></img>
+									<img className="mt-10 rounded duration-1000" src={s.imgs1}></img>
+									<img className="mt-10 rounded duration-1000" src={s.imgs2}></img>
+									<img className="mt-10 rounded duration-1000" src={s.imgs3}></img>
+									<img className="mt-10 rounded duration-1000" src={s.imgs4}></img>
 								</div>
 							</Link>
 						</Card>
