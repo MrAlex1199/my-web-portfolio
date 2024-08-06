@@ -13,7 +13,7 @@ const P_info = [
 	},
 ];
 
-const nav = [
+const link = [
 	{ 
 		name: "GitHub", href: "https://github.com/MrAlex1199/IFIXPC.git",
 		icon: <Github size={20} />,
@@ -47,7 +47,7 @@ export default function ifixpc() {
 					))}
 					<nav className="my-16 animate-fade-in">
 						<ul className="flex items-center justify-center gap-4">
-							{nav.map((item , index) => (
+							{link.map((item , index) => (
 								<Link
 									key={index}
 									href={item.href}

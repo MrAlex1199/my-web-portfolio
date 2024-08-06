@@ -10,23 +10,23 @@ const socials = [
 ];
 
 const skills = {
-    HTML: "100%",
+    HTML:"100%",
     CSS: "100%",
     TailwindCSS: "100%",
     JavaScript: "100%",
-    TypeScript: "60%",
-    BootStrap: "80%",
-    Reactjs: "90%",
-    Nextjs: "70%",
-    jQuery: "80%",
-    Nodejs: "80%",
-    Expressjs: "80%",
-    EJS: "80%",
-    Git: "80%",
-    API: "80%",
+    EJS: "100%",
+    React: "90%",
     PostgreSQL: "90%",
     MongoDB: "90%",
+    BootStrap: "80%",
+    jQuery: "80%",
+    Node: "80%",
+    Express: "80%",
+    Git: "80%",
+    API: "80%",
     Firebase: "80%",
+    Next: "70%",
+    TypeScript: "60%",
 };
 
 export default function About() {
