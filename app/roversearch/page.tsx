@@ -9,7 +9,12 @@ const P_info = [
 		href: "https://my-capstone-project-4-nasa-rover-photo.onrender.com",
 		label: "This web application facilitates the exploration of imagery captured by NASA's four Mars rovers: Spirit, Opportunity, Curiosity, and Perseverance. The user interface is implemented with HTML and CSS, while the backend leverages the Node.js Express framework. The application retrieves image data through NASA's public API, providing a user-friendly interface for browsing the extensive Martian photographic record.",
 		handle: "ROVER-SEARCH",
-		imgs: "/webexample/RoverWeb.png",
+		imgs1: "/webexample/Rover/R1.png",
+		imgs2: "/webexample/Rover/R2.jpg",
+		imgs3: "/webexample/Rover/R3.jpg",
+		imgs4: "/webexample/Rover/R4.jpg",
+		imgs5: "/webexample/Rover/R5.jpg",
+		imgs6: "/webexample/Rover/R6.jpg",
 	},
 ];
 
@@ -40,7 +45,12 @@ export default function roversearch() {
 									<span className="mt-4 text-sm text-center duration-1000 text-zinc-400 group-hover:text-zinc-200">
 										{s.label}
 									</span>
-									<img className="mt-10 rounded duration-1000" src={s.imgs}></img>
+									<img className="mt-10 rounded duration-1000" src={s.imgs1}></img>
+									<img className="mt-10 rounded duration-1000" src={s.imgs2}></img>
+									<img className="mt-10 rounded duration-1000" src={s.imgs3}></img>
+									<img className="mt-10 rounded duration-1000" src={s.imgs4}></img>
+									<img className="mt-10 rounded duration-1000" src={s.imgs5}></img>
+									<img className="mt-10 rounded duration-1000" src={s.imgs6}></img>
 								</div>
 							</Link>
 						</Card>

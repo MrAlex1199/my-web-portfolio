@@ -9,7 +9,7 @@ const P_info = [
 		href: "https://github.com/MrAlex1199/my-web-portfolio.git",
 		label: "This responsive web experience showcases my skills and accomplishments through a carefully curated collection of projects. Built with Next.js and Tailwind CSS, the website delivers a seamless user experience across all devices, from desktop browsers to smartphones.",
 		handle: "NEXT-JS-RESUME",
-		imgs: "/webexample/AlexPortfolio.jpg",
+		imgs: "/webexample/NEXTPortfolio/NEXT1.jpg",
 	},
 ];
 

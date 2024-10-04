@@ -9,7 +9,7 @@ const P_info = [
 		href: "https://ifixpc.onrender.com",
 		label: "This web application empowers small and medium-sized enterprises (SMEs) with a user-friendly interface built using Bootstrap 5. The backend leverages the Node.js Express framework, ensuring scalability and efficiency. This comprehensive solution streamlines business management processes, allowing SMEs to focus on core competencies and growth.",
 		handle: "IFIX-PC",
-		imgs: "/webexample/Ifixpc.jpg",
+		imgs1: "/webexample/IPC/P1.jpg",
 	},
 ];
 
@@ -40,7 +40,7 @@ export default function ifixpc() {
 									<span className="mt-4 text-sm text-center duration-1000 text-zinc-400 group-hover:text-zinc-200">
 										{s.label}
 									</span>
-									<img className="mt-10 rounded duration-1000" src={s.imgs}></img>
+									<img className="mt-10 rounded duration-1000" src={s.imgs1}></img>
 								</div>
 							</Link>
 						</Card>
