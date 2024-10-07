@@ -9,7 +9,11 @@ const P_info = [
 		href: "https://github.com/MrAlex1199/my-web-portfolio.git",
 		label: "This responsive web experience showcases my skills and accomplishments through a carefully curated collection of projects. Built with Next.js and Tailwind CSS, the website delivers a seamless user experience across all devices, from desktop browsers to smartphones.",
 		handle: "NEXT-JS-RESUME",
-		imgs: "/webexample/NEXTPortfolio/NEXT1.jpg",
+		imgs1: "/webexample/NEXTPortfolio/NT1.jpg",
+		imgs2: "/webexample/NEXTPortfolio/NT2.jpg",
+		imgs3: "/webexample/NEXTPortfolio/NT3.jpg",
+		imgs4: "/webexample/NEXTPortfolio/NT4.jpg",
+
 	},
 ];
 
@@ -40,7 +44,10 @@ export default function nextjsresume() {
 									<span className="mt-4 text-sm text-center duration-1000 text-zinc-400 group-hover:text-zinc-200">
 										{s.label}
 									</span>
-									<img className="mt-10 rounded duration-1000" src={s.imgs}></img>
+									<img className="mt-10 rounded duration-1000" src={s.imgs1}></img>
+									<img className="mt-10 rounded duration-1000" src={s.imgs2}></img>
+									<img className="mt-10 rounded duration-1000" src={s.imgs3}></img>
+									<img className="mt-10 rounded duration-1000" src={s.imgs4}></img>
 								</div>
 							</Link>
 						</Card>

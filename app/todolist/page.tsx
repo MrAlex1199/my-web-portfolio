@@ -9,7 +9,7 @@ const P_info = [
 		href: "https://projects-capstone-2-todo-list-web-app-v2.onrender.com",
 		label: "This web-based application empowers users to manage their tasks efficiently. Built with HTML and CSS, it offers a responsive design that adapts seamlessly to any device, from smartphones to desktops. This user-friendly platform allows for clear organization and prioritization, boosting productivity and achieving goals. ",
 		handle: "TODO-LIST",
-		imgs: "/webexample/todolist.jpg",
+		imgs: "/webexample/ToDo/todolist.jpg",
 	},
 ];
 

@@ -9,7 +9,13 @@ const P_info = [
 		href: "https://ifixpc.onrender.com",
 		label: "This web application empowers small and medium-sized enterprises (SMEs) with a user-friendly interface built using Bootstrap 5. The backend leverages the Node.js Express framework, ensuring scalability and efficiency. This comprehensive solution streamlines business management processes, allowing SMEs to focus on core competencies and growth.",
 		handle: "IFIX-PC",
-		imgs1: "/webexample/IPC/P1.jpg",
+		imgs1: "/webexample/IPC/IF1.jpg",
+		imgs2: "/webexample/IPC/IF2.jpg",
+		imgs3: "/webexample/IPC/IF3.jpg",
+		imgs4: "/webexample/IPC/IF5.jpg",
+		imgs5: "/webexample/IPC/IF6.jpg",
+		imgs6: "/webexample/IPC/IF7.jpg",
+		imgs7: "/webexample/IPC/IF4.jpg",
 	},
 ];
 
@@ -41,6 +47,12 @@ export default function ifixpc() {
 										{s.label}
 									</span>
 									<img className="mt-10 rounded duration-1000" src={s.imgs1}></img>
+									<img className="mt-10 rounded duration-1000" src={s.imgs2}></img>
+									<img className="mt-10 rounded duration-1000" src={s.imgs3}></img>
+									<img className="mt-10 rounded duration-1000" src={s.imgs4}></img>
+									<img className="mt-10 rounded duration-1000" src={s.imgs5}></img>
+									<img className="mt-10 rounded duration-1000" src={s.imgs6}></img>
+									<img className="mt-10 rounded duration-1000" src={s.imgs7}></img>
 								</div>
 							</Link>
 						</Card>
