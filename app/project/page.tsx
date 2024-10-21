@@ -6,34 +6,39 @@ import { Card } from "../components/card";
 const Projects = [
 	{
 		href: "/roversearch",
-		label: "github",
+		label: "Online",
 		handle: "ROVER-SEARCH",
 	},
 	{
 		href: "/ifixpc",
-		label: "github",
+		label: "online",
 		handle: "IFIX-PC",
 	},
 	{
 		href: "/mywebecom",
-		label: "github",
+		label: "OnGithub",
 		handle: "MY-Web-ECom",
 
 	},
 	{
 		href: "/nextjsresume",
-		label: "github",
+		label: "online",
 		handle: "NEXT-JS-RESUME",
 	},
 	{
 		href: "/bookreview",
-		label: "github",
+		label: "OnGithub",
 		handle: "BOOK-REVIEW",
 	},
 	{
 		href: "/todolist",
-		label: "github",
+		label: "online",
 		handle: "TODO-LIST",
+	},
+	{
+		href: "/homedaddy",
+		label: "OnGithub",
+		handle: "Homedaddy",
 	},
 ];
 
