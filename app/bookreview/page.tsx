@@ -9,11 +9,7 @@ const P_info = [
 		href: "https://projects-capstone-3-notebook-public.onrender.com",
 		label: "This user-centric web application empowers anyone to discover and review books seamlessly. The intuitive interface, built with HTML ,CSS  and Bootstrap 5. fosters user engagement. The robust backend leverages the Node.js Express framework and a PostgreSQL database, ensuring scalability and efficient data management. This comprehensive platform fosters a vibrant community of book lovers and readers.",
 		handle: "BOOK-REVIEW",
-		imgs1: "/webexample/Book/N1.jpg",
-		imgs2: "/webexample/Book/N2.jpg",
-		imgs3: "/webexample/Book/N3.jpg",
-		imgs4: "/webexample/Book/N4.jpg",
-		imgs5: "/webexample/Book/N5.jpg",
+		images: Array.from({ length: 5 }, (_, i) => `/webexample/Book/N${i + 1}.jpg`),
 	},
 ];
 
@@ -32,41 +28,20 @@ export default function bookreview() {
 				<div className="grid w-full grid-cols-1 gap-8 mx-auto mt-32 sm:mt-10 sm:grid-cols-1 lg:gap-16">
 					{P_info.map((s , index) => (
 						<Card key={index}>
-							<Link
-								href={s.href}
-								target="_blank"
-								className="p-4 relative flex flex-col items-center gap-4 duration-700 group md:gap-8 md:py-24  lg:pb-40  md:p-16"
-							>
-								<div className="z-10 flex flex-col items-center">
-									<span className="lg:text-xl font-medium duration-150 xl:text-3xl text-zinc-200 group-hover:text-white font-display">
-										{s.handle}
-									</span>
-									<span className="mt-4 text-sm text-center duration-1000 text-zinc-400 group-hover:text-zinc-200">
-										{s.label}
-									</span>
-									<img className="mt-10 rounded duration-1000" src={s.imgs1}></img>
-									<span className="lg:text-xl font-medium duration-150 xl:text-3xl text-zinc-200 group-hover:text-white my-5 font-display">
-										<p>Home Page</p>
-									</span>
-									<img className="mt-10 rounded duration-1000" src={s.imgs2}></img>
-									<span className="lg:text-xl font-medium duration-150 xl:text-3xl text-zinc-200 group-hover:text-white my-5 font-display">
-										<p>About Page</p>
-									</span>
-									<img className="mt-10 rounded duration-1000" src={s.imgs3}></img>
-									<span className="lg:text-xl font-medium duration-150 xl:text-3xl text-zinc-200 group-hover:text-white my-5 font-display">
-										<p>Contact Page</p>
-									</span>
-									<img className="mt-10 rounded duration-1000" src={s.imgs4}></img>
-									<span className="lg:text-xl font-medium duration-150 xl:text-3xl text-zinc-200 group-hover:text-white my-5 font-display">
-										<p>Add Review Page</p>
-									</span>
-									<img className="mt-10 rounded duration-1000" src={s.imgs5}></img>
-									<span className="lg:text-xl font-medium duration-150 xl:text-3xl text-zinc-200 group-hover:text-white my-5 font-display">
-										<p>Menu Page</p>
-									</span>
-								</div>
-							</Link>
-						</Card>
+						<Link href={s.href} target="_blank" className="p-4 flex flex-col items-center gap-4 group">
+						  <div className="z-10 flex flex-col items-center">
+							<span className="lg:text-xl font-medium text-zinc-200 group-hover:text-white">
+							  {s.handle}
+							</span>
+							<span className="mt-4 text-sm text-center duration-1000 text-zinc-400 group-hover:text-zinc-200">
+							  {s.label}
+							</span>
+							{s.images.map((src, idx) => (
+							  <img key={idx} className="mt-10 rounded" src={src} />
+							))}
+						  </div>
+						</Link>
+					  </Card>
 					))}
 					<nav className="my-16 animate-fade-in">
 						<ul className="flex items-center justify-center gap-4">

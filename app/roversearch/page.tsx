@@ -9,12 +9,7 @@ const P_info = [
 		href: "https://my-capstone-project-4-nasa-rover-photo.onrender.com",
 		label: "This web application facilitates the exploration of imagery captured by NASA's four Mars rovers: Spirit, Opportunity, Curiosity, and Perseverance. The user interface is implemented with HTML and CSS, while the backend leverages the Node.js Express framework. The application retrieves image data through NASA's public API, providing a user-friendly interface for browsing the extensive Martian photographic record.",
 		handle: "ROVER-SEARCH",
-		imgs1: "/webexample/Rover/R1.png",
-		imgs2: "/webexample/Rover/R2.jpg",
-		imgs3: "/webexample/Rover/R3.jpg",
-		imgs4: "/webexample/Rover/R4.jpg",
-		imgs5: "/webexample/Rover/R5.jpg",
-		imgs6: "/webexample/Rover/R6.jpg",
+		images: Array.from({ length: 6 }, (_, i) => `/webexample/Rover/R${i + 1}.jpg`),
 	},
 ];
 
@@ -33,27 +28,20 @@ export default function roversearch() {
 				<div className="grid w-full grid-cols-1 gap-8 mx-auto mt-32 sm:mt-10 sm:grid-cols-1 lg:gap-16">
 					{P_info.map((s , index) => (
 						<Card key={index}>
-							<Link
-								href={s.href}
-								target="_blank"
-								className="p-4 relative flex flex-col items-center gap-4 duration-700 group md:gap-8 md:py-24  lg:pb-40  md:p-16"
-							>
-								<div className="z-10 flex flex-col items-center">
-									<span className="lg:text-xl font-medium duration-150 xl:text-3xl text-zinc-200 group-hover:text-white font-display">
-										{s.handle}
-									</span>
-									<span className="mt-4 text-sm text-center duration-1000 text-zinc-400 group-hover:text-zinc-200">
-										{s.label}
-									</span>
-									<img className="mt-10 rounded duration-1000" src={s.imgs1}></img>
-									<img className="mt-10 rounded duration-1000" src={s.imgs2}></img>
-									<img className="mt-10 rounded duration-1000" src={s.imgs3}></img>
-									<img className="mt-10 rounded duration-1000" src={s.imgs4}></img>
-									<img className="mt-10 rounded duration-1000" src={s.imgs5}></img>
-									<img className="mt-10 rounded duration-1000" src={s.imgs6}></img>
-								</div>
-							</Link>
-						</Card>
+						<Link href={s.href} target="_blank" className="p-4 flex flex-col items-center gap-4 group">
+						  <div className="z-10 flex flex-col items-center">
+							<span className="lg:text-xl font-medium text-zinc-200 group-hover:text-white">
+							  {s.handle}
+							</span>
+							<span className="mt-4 text-sm text-center duration-1000 text-zinc-400 group-hover:text-zinc-200">
+							  {s.label}
+							</span>
+							{s.images.map((src, idx) => (
+							  <img key={idx} className="mt-10 rounded" src={src} />
+							))}
+						  </div>
+						</Link>
+					  </Card>
 					))}
 					<nav className="my-16 animate-fade-in">
 						<ul className="flex items-center justify-center gap-4">

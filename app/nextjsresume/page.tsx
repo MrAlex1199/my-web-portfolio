@@ -9,11 +9,7 @@ const P_info = [
 		href: "https://github.com/MrAlex1199/my-web-portfolio.git",
 		label: "This responsive web experience showcases my skills and accomplishments through a carefully curated collection of projects. Built with Next.js and Tailwind CSS, the website delivers a seamless user experience across all devices, from desktop browsers to smartphones.",
 		handle: "NEXT-JS-RESUME",
-		imgs1: "/webexample/NEXTPortfolio/NT1.jpg",
-		imgs2: "/webexample/NEXTPortfolio/NT2.jpg",
-		imgs3: "/webexample/NEXTPortfolio/NT3.jpg",
-		imgs4: "/webexample/NEXTPortfolio/NT4.jpg",
-
+		images: Array.from({ length: 4 }, (_, i) => `/webexample/NEXTPortfolio/NT${i + 1}.jpg`),
 	},
 ];
 
@@ -32,25 +28,20 @@ export default function nextjsresume() {
 				<div className="grid w-full grid-cols-1 gap-8 mx-auto mt-32 sm:mt-10 sm:grid-cols-1 lg:gap-16">
 					{P_info.map((s , index) => (
 						<Card key={index}>
-							<Link
-								href={s.href}
-								target="_blank"
-								className="p-4 relative flex flex-col items-center gap-4 duration-700 group md:gap-8 md:py-24  lg:pb-40  md:p-16"
-							>
-								<div className="z-10 flex flex-col items-center">
-									<span className="lg:text-xl font-medium duration-150 xl:text-3xl text-zinc-200 group-hover:text-white font-display">
-										{s.handle}
-									</span>
-									<span className="mt-4 text-sm text-center duration-1000 text-zinc-400 group-hover:text-zinc-200">
-										{s.label}
-									</span>
-									<img className="mt-10 rounded duration-1000" src={s.imgs1}></img>
-									<img className="mt-10 rounded duration-1000" src={s.imgs2}></img>
-									<img className="mt-10 rounded duration-1000" src={s.imgs3}></img>
-									<img className="mt-10 rounded duration-1000" src={s.imgs4}></img>
-								</div>
-							</Link>
-						</Card>
+						<Link href={s.href} target="_blank" className="p-4 flex flex-col items-center gap-4 group">
+						  <div className="z-10 flex flex-col items-center">
+							<span className="lg:text-xl font-medium text-zinc-200 group-hover:text-white">
+							  {s.handle}
+							</span>
+							<span className="mt-4 text-sm text-center duration-1000 text-zinc-400 group-hover:text-zinc-200">
+							  {s.label}
+							</span>
+							{s.images.map((src, idx) => (
+							  <img key={idx} className="mt-10 rounded" src={src} />
+							))}
+						  </div>
+						</Link>
+					  </Card>
 					))}
 					<nav className="my-16 animate-fade-in">
 						<ul className="flex items-center justify-center gap-4">
