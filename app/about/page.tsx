@@ -1,4 +1,6 @@
 "use client";
+import { Github, Mail, Twitter } from "lucide-react";
+import Link from "next/link";
 import { Navigation } from "../components/nav";
 import { Card } from "../components/card";
 
@@ -28,6 +30,22 @@ const skills = {
     Next: "70%",
     TypeScript: "60%",
 };
+
+
+const links = [
+	{ 
+		name: "GitHub", href: "https://github.com/MrAlex1199/MrAlexMY-Web-ECom.git",
+		icon: <Github size={20} />,
+	},
+    { 
+		name: "Mail", href: "mailto:t57havytanks@gmail.com",
+		icon: <Mail size={20} />,
+	},
+    { 
+		name: "Twitter", href: "https://github.com/MrAlex1199/MrAlexMY-Web-ECom.git",
+		icon: <Twitter size={20} />,
+	},
+  ];
 
 export default function About() {
     return (
@@ -71,6 +89,18 @@ export default function About() {
                             </div>
                         </div>
                     </Card>
+                    <nav className="my-16">
+			  <ul className="flex items-center justify-center gap-4">
+				{links.map((item, index) => (
+				  <Link key={index} href={item.href} className="text-sm text-zinc-500 hover:text-zinc-300">
+					<span className="flex items-center justify-center w-12 h-12 rounded-full text-zinc-200 bg-zinc-900 group-hover:bg-zinc-900">
+					  {item.icon}
+					</span>
+					{"Github"}
+				  </Link>
+				))}
+			  </ul>
+			</nav>
                 </div>
             </div>
         </div>
