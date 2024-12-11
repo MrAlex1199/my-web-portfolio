@@ -2,10 +2,12 @@
 import { ArrowLeft } from "lucide-react";
 import Link from "next/link";
 import React, { useEffect, useRef, useState } from "react";
+import { useRouter } from "next/navigation"; // Import useRouter
 
 export const Navigation: React.FC = () => {
 	const ref = useRef<HTMLElement>(null);
 	const [isIntersecting, setIntersecting] = useState(true);
+	const router = useRouter(); // ใช้ useRouter
 
 	useEffect(() => {
 		if (!ref.current) return;
@@ -16,6 +18,16 @@ export const Navigation: React.FC = () => {
 		observer.observe(ref.current);
 		return () => observer.disconnect();
 	}, []);
+
+	const handleBack = () => {
+		if (window.history.length > 1) {
+			// ถ้ามีประวัติการนำทาง (history) ให้ย้อนกลับ
+			router.back();
+		} else {
+			// ถ้าไม่มีประวัติ ให้ไปที่หน้าอื่นๆ (e.g. /project)
+			router.push("/project");
+		}
+	};
 
 	return (
 		<header ref={ref}>
@@ -48,12 +60,13 @@ export const Navigation: React.FC = () => {
 						</Link>
 					</div>
 
-					<Link
-						href="/"
+					{/* เปลี่ยนลิงก์ ArrowLeft */}
+					<button
+						onClick={handleBack}
 						className="duration-200 text-zinc-300 hover:text-zinc-100"
 					>
-						<ArrowLeft className="w-6 h-6 " />
-					</Link>
+						<ArrowLeft className="w-6 h-6" />
+					</button>
 				</div>
 			</div>
 		</header>

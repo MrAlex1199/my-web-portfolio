@@ -40,6 +40,11 @@ const Projects = [
 		label: "OnGithub",
 		handle: "Homedaddy",
 	},
+	{
+		href: "/plant",
+		label: "OnGithub",
+		handle: "PlanetPlant",
+	},
 ];
 
 export default function Project() {

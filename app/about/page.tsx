@@ -38,7 +38,7 @@ const links = [
 		icon: <Github size={20} />,
 	},
     { 
-		name: "Mail", href: "mailto:t57havytanks@gmail.com",
+		name: "EmailTo", href: "mailto:t57havytanks@gmail.com",
 		icon: <Mail size={20} />,
 	},
     { 
@@ -96,7 +96,7 @@ export default function About() {
 					<span className="flex items-center justify-center w-12 h-12 rounded-full text-zinc-200 bg-zinc-900 group-hover:bg-zinc-900">
 					  {item.icon}
 					</span>
-					{"Github"}
+					{item.name}
 				  </Link>
 				))}
 			  </ul>
