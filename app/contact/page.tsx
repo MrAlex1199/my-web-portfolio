@@ -19,7 +19,7 @@ const socials = [
 	},
 	{
 		icon: <Linkedin size={20} />,
-		href: "https://github.com/MrAlex1199",
+		href: "https://www.linkedin.com/in/krittapas-thipsangwong-6707a3319/",
 		label: "Linkedin",
 		handle: "Krittapas Thipsangwong",
 	},
