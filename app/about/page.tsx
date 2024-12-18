@@ -1,5 +1,5 @@
 "use client";
-import { Github, Mail, Twitter } from "lucide-react";
+import { Github, Mail, Linkedin } from "lucide-react";
 import Link from "next/link";
 import { Navigation } from "../components/nav";
 import { Card } from "../components/card";
@@ -34,7 +34,7 @@ const skills = {
 
 const links = [
 	{ 
-		name: "GitHub", href: "https://github.com/MrAlex1199/MrAlexMY-Web-ECom.git",
+		name: "GitHub", href: "https://github.com/MrAlex1199",
 		icon: <Github size={20} />,
 	},
     { 
@@ -42,8 +42,8 @@ const links = [
 		icon: <Mail size={20} />,
 	},
     { 
-		name: "Twitter", href: "https://github.com/MrAlex1199/MrAlexMY-Web-ECom.git",
-		icon: <Twitter size={20} />,
+		name: "Linkedin", href: "https://www.linkedin.com/in/krittapas-thipsangwong-6707a3319/",
+		icon: <Linkedin size={20} />,
 	},
   ];
 
