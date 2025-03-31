@@ -37,5 +37,4 @@ export default function Home() {
       <div className="my-16  animate-fade-in"></div>
     </div>
   );
-
 }
