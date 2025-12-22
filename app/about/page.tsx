@@ -1,108 +1,275 @@
 "use client";
-import { Github, Mail, Linkedin } from "lucide-react";
+import { Github, Mail, Linkedin, Code2, Database, Wrench, Globe } from "lucide-react";
 import Link from "next/link";
 import { Navigation } from "../components/nav";
 import { Card } from "../components/card";
+import { motion } from "framer-motion";
 
-const socials = [
-    {
-        handle: "About Me",
-        label: "Leveraging 4 years of experience as a Computer Repair Technician, I'm currently expanding my skillset to become a full-stack web developer. This transition allows me to combine my technical knowledge with a passion for creating new and engaging web experiences.",
-    },
+const skillCategories = [
+	{
+		title: "Frontend",
+		icon: <Globe className="w-5 h-5" />,
+		color: "from-blue-500 to-cyan-500",
+		skills: [
+			{ name: "HTML/CSS", level: 100 },
+			{ name: "TailwindCSS", level: 100 },
+			{ name: "JavaScript", level: 100 },
+			{ name: "React", level: 90 },
+			{ name: "Next.js", level: 70 },
+			{ name: "TypeScript", level: 60 },
+		],
+	},
+	{
+		title: "Backend",
+		icon: <Code2 className="w-5 h-5" />,
+		color: "from-purple-500 to-pink-500",
+		skills: [
+			{ name: "Node.js", level: 80 },
+			{ name: "Express", level: 80 },
+			{ name: "EJS", level: 100 },
+			{ name: "API", level: 80 },
+		],
+	},
+	{
+		title: "Database",
+		icon: <Database className="w-5 h-5" />,
+		color: "from-green-500 to-emerald-500",
+		skills: [
+			{ name: "PostgreSQL", level: 90 },
+			{ name: "MongoDB", level: 90 },
+			{ name: "Firebase", level: 80 },
+		],
+	},
+	{
+		title: "Tools & Others",
+		icon: <Wrench className="w-5 h-5" />,
+		color: "from-orange-500 to-yellow-500",
+		skills: [
+			{ name: "Git", level: 80 },
+			{ name: "Bootstrap", level: 80 },
+			{ name: "jQuery", level: 80 },
+		],
+	},
 ];
 
-const skills = {
-    HTML:"100%",
-    CSS: "100%",
-    TailwindCSS: "100%",
-    JavaScript: "100%",
-    EJS: "100%",
-    React: "90%",
-    PostgreSQL: "90%",
-    MongoDB: "90%",
-    BootStrap: "80%",
-    jQuery: "80%",
-    Node: "80%",
-    Express: "80%",
-    Git: "80%",
-    API: "80%",
-    Firebase: "80%",
-    Next: "70%",
-    TypeScript: "60%",
+const links = [
+	{
+		name: "GitHub",
+		href: "https://github.com/MrAlex1199",
+		icon: <Github size={24} />,
+		color: "hover:bg-zinc-700",
+	},
+	{
+		name: "Email",
+		href: "mailto:t57havytanks@gmail.com",
+		icon: <Mail size={24} />,
+		color: "hover:bg-red-500/20 hover:text-red-400",
+	},
+	{
+		name: "LinkedIn",
+		href: "https://www.linkedin.com/in/krittapas-thipsangwong-6707a3319/",
+		icon: <Linkedin size={24} />,
+		color: "hover:bg-blue-500/20 hover:text-blue-400",
+	},
+];
+
+const container = {
+	hidden: { opacity: 0 },
+	show: {
+		opacity: 1,
+		transition: { staggerChildren: 0.1 },
+	},
 };
 
-
-const links = [
-	{ 
-		name: "GitHub", href: "https://github.com/MrAlex1199",
-		icon: <Github size={20} />,
-	},
-    { 
-		name: "EmailTo", href: "mailto:t57havytanks@gmail.com",
-		icon: <Mail size={20} />,
-	},
-    { 
-		name: "Linkedin", href: "https://www.linkedin.com/in/krittapas-thipsangwong-6707a3319/",
-		icon: <Linkedin size={20} />,
-	},
-  ];
+const item = {
+	hidden: { opacity: 0, y: 20 },
+	show: { opacity: 1, y: 0 },
+};
 
 export default function About() {
-    return (
-        <div className="bg-gradient-to-tl from-zinc-900/0 via-zinc-900 to-zinc-900/0">
-            <Navigation />
-            <div className="container flex items-center justify-center min-h-screen px-4 mx-auto mt-20">
-                <div className="grid w-full grid-cols-1 gap-8 mx-auto mt-32 sm:mt-0 lg:gap-16">
-                    {socials.map((social) => (
-                        <Card key={social.handle}>
-                            <div className="p-4 relative flex flex-col items-center gap-4 duration-700 group md:gap-8 md:py-24 lg:pb-48 md:p-16">
-                                <div className="z-10 flex flex-col items-center">
-                                    <span className="lg:text-xl font-medium duration-150 xl:text-3xl text-zinc-200 group-hover:text-white font-display">
-                                        {social.handle}
-                                    </span>
-                                    <span className="mt-4 text-sm text-center duration-1000 text-zinc-400 group-hover:text-zinc-200">
-                                        {social.label}
-                                    </span>
-                                </div>
-                            </div>
-                        </Card>
-                    ))}
-                    <Card>
-                        <div className="p-4 relative flex flex-col items-center gap-4 duration-700 group md:gap-8 md:py-24 md:p-16">
-                            <div className="z-10 flex flex-col w-full items-center">
-                                <span className="lg:text-xl font-medium duration-150 xl:text-3xl text-zinc-200 group-hover:text-white font-display">
-                                    My Skill
-                                </span>
-                                <div className="mt-4 text-sm text-center w-full duration-1000 text-zinc-400 group-hover:text-zinc-200">
-                                    {Object.entries(skills).map(([skill, level]) => (
-                                        <div key={skill} className="w-full mb-4">
-                                            <div className="flex justify-between mb-1">
-                                                <span className="text-base font-medium text-blue-700 dark:text-white">{skill}</span>
-                                                <span className="text-sm font-medium text-blue-700 dark:text-white">{level}</span>
-                                            </div>
-                                            <div className="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700">
-                                                <div className="bg-blue-600 h-2.5 rounded-full" style={{ width: level }}></div>
-                                            </div>
-                                        </div>
-                                    ))}
-                                </div>
-                            </div>
-                        </div>
-                    </Card>
-                    <nav className="my-16">
-			  <ul className="flex items-center justify-center gap-4">
-				{links.map((item, index) => (
-				  <Link key={index} href={item.href} className="text-sm text-zinc-500 hover:text-zinc-300">
-					<span className="flex items-center justify-center w-12 h-12 rounded-full text-zinc-200 bg-zinc-900 group-hover:bg-zinc-900">
-					  {item.icon}
-					</span>
-					{item.name}
-				  </Link>
-				))}
-			  </ul>
-			</nav>
-                </div>
-            </div>
-        </div>
-    );
+	return (
+		<div className="min-h-screen bg-gradient-to-tl from-zinc-900/0 via-zinc-900 to-zinc-900/0">
+			<Navigation />
+			<div className="container px-6 mx-auto pt-24 pb-16 max-w-6xl">
+				{/* Hero Section */}
+				<motion.div
+					initial={{ opacity: 0, y: -20 }}
+					animate={{ opacity: 1, y: 0 }}
+					transition={{ duration: 0.5 }}
+					className="text-center mb-16"
+				>
+					{/* Avatar */}
+					<div className="relative inline-block mb-6">
+						<div className="w-32 h-32 rounded-full bg-gradient-to-r from-purple-500 via-pink-500 to-cyan-500 p-1">
+							<div className="w-full h-full rounded-full bg-zinc-900 flex items-center justify-center">
+								<span className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">
+									KT
+								</span>
+							</div>
+						</div>
+						<span className="absolute bottom-2 right-2 w-4 h-4 bg-green-500 rounded-full border-2 border-zinc-900"></span>
+					</div>
+
+					<h1 className="text-4xl font-bold text-white mb-2 font-display sm:text-5xl">
+						About Me
+					</h1>
+					<p className="text-zinc-400 max-w-2xl mx-auto text-lg leading-relaxed">
+						Leveraging 4 years of experience as a Computer Repair Technician,
+						I'm currently expanding my skillset to become a{" "}
+						<span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400 font-semibold">
+							Full-Stack Web Developer
+						</span>
+						. This transition allows me to combine my technical knowledge with a
+						passion for creating new and engaging web experiences.
+					</p>
+
+					{/* Social Links */}
+					<div className="flex justify-center gap-4 mt-8">
+						{links.map((link, index) => (
+							<Link
+								key={index}
+								href={link.href}
+								target="_blank"
+								className={`flex items-center gap-2 px-4 py-2 rounded-full bg-zinc-800/50 text-zinc-300 transition-all duration-300 ${link.color}`}
+							>
+								{link.icon}
+								<span className="text-sm font-medium">{link.name}</span>
+							</Link>
+						))}
+					</div>
+				</motion.div>
+
+				{/* Skills Section */}
+				<motion.div
+					variants={container}
+					initial="hidden"
+					animate="show"
+					className="mb-16"
+				>
+					<h2 className="text-2xl font-semibold text-zinc-200 mb-8 text-center">
+						Skills & Technologies
+					</h2>
+					<div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+						{skillCategories.map((category, catIndex) => (
+							<motion.div key={catIndex} variants={item}>
+								<Card>
+									<div className="p-6">
+										<div className="flex items-center gap-3 mb-6">
+											<div
+												className={`p-2 rounded-lg bg-gradient-to-r ${category.color}`}
+											>
+												{category.icon}
+											</div>
+											<h3 className="text-lg font-semibold text-white">
+												{category.title}
+											</h3>
+										</div>
+										<div className="space-y-4">
+											{category.skills.map((skill, skillIndex) => (
+												<div key={skillIndex}>
+													<div className="flex justify-between mb-1">
+														<span className="text-sm font-medium text-zinc-300">
+															{skill.name}
+														</span>
+														<span className="text-sm text-zinc-500">
+															{skill.level}%
+														</span>
+													</div>
+													<div className="w-full bg-zinc-800 rounded-full h-2 overflow-hidden">
+														<motion.div
+															initial={{ width: 0 }}
+															animate={{ width: `${skill.level}%` }}
+															transition={{
+																duration: 1,
+																delay: catIndex * 0.2 + skillIndex * 0.1,
+																ease: "easeOut",
+															}}
+															className={`h-full rounded-full bg-gradient-to-r ${category.color}`}
+														/>
+													</div>
+												</div>
+											))}
+										</div>
+									</div>
+								</Card>
+							</motion.div>
+						))}
+					</div>
+				</motion.div>
+
+				{/* Experience Timeline */}
+				<motion.div
+					initial={{ opacity: 0 }}
+					animate={{ opacity: 1 }}
+					transition={{ delay: 0.5 }}
+					className="mb-16"
+				>
+					<h2 className="text-2xl font-semibold text-zinc-200 mb-8 text-center">
+						Journey
+					</h2>
+					<div className="max-w-2xl mx-auto">
+						<Card>
+							<div className="p-6">
+								<div className="relative border-l-2 border-zinc-700 pl-6 space-y-8">
+									<div className="relative">
+										<div className="absolute -left-[29px] w-4 h-4 rounded-full bg-gradient-to-r from-purple-500 to-pink-500"></div>
+										<span className="text-sm text-purple-400 font-medium">
+											ปัจจุบัน
+										</span>
+										<h4 className="text-lg font-semibold text-white mt-1">
+											Full-Stack Web Developer
+										</h4>
+										<p className="text-zinc-400 text-sm mt-1">
+											กำลังพัฒนาทักษะและสร้างโปรเจกต์ใหม่ๆ
+										</p>
+									</div>
+									<div className="relative">
+										<div className="absolute -left-[29px] w-4 h-4 rounded-full bg-zinc-600"></div>
+										<span className="text-sm text-zinc-500 font-medium">
+											4 ปี
+										</span>
+										<h4 className="text-lg font-semibold text-white mt-1">
+											Computer Repair Technician
+										</h4>
+										<p className="text-zinc-400 text-sm mt-1">
+											ซ่อมและดูแลระบบคอมพิวเตอร์
+										</p>
+									</div>
+								</div>
+							</div>
+						</Card>
+					</div>
+				</motion.div>
+
+				{/* CTA */}
+				<motion.div
+					initial={{ opacity: 0 }}
+					animate={{ opacity: 1 }}
+					transition={{ delay: 0.8 }}
+					className="text-center"
+				>
+					<p className="text-zinc-500 mb-4">ดูผลงานของผม</p>
+					<Link
+						href="/project"
+						className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-medium rounded-full hover:from-purple-500 hover:to-pink-500 transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/25"
+					>
+						Projects
+						<svg
+							className="w-4 h-4"
+							fill="none"
+							stroke="currentColor"
+							viewBox="0 0 24 24"
+						>
+							<path
+								strokeLinecap="round"
+								strokeLinejoin="round"
+								strokeWidth={2}
+								d="M17 8l4 4m0 0l-4 4m4-4H3"
+							/>
+						</svg>
+					</Link>
+				</motion.div>
+			</div>
+		</div>
+	);
 }
