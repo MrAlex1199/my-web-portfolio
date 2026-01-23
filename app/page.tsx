@@ -21,7 +21,7 @@ import {
 const Projects = [
 	{
 		href: "/roversearch",
-		label: "Online",
+		label: "Offline",
 		handle: "ROVER-SEARCH",
 		img: "/webexample/Rover/R1.jpg",
 		description: "ระบบค้นหาข้อมูลอัจฉริยะ พร้อม UI ที่ทันสมัย",
@@ -39,7 +39,7 @@ const Projects = [
 	},
 	{
 		href: "/mywebecom",
-		label: "GitHub",
+		label: "Online",
 		handle: "MY-Web-ECom",
 		img: "/webexample/Ecom/E1.jpg",
 		description: "ร้านค้าออนไลน์ E-Commerce เต็มรูปแบบ",
