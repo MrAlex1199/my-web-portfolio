@@ -25,7 +25,7 @@ const Projects = [
 		handle: "ROVER-SEARCH",
 		img: "/webexample/Rover/R1.jpg",
 		description: "ระบบค้นหาข้อมูลอัจฉริยะ พร้อม UI ที่ทันสมัย",
-		tech: ["React", "API", "Search"],
+		tech: ["React", "NASA API"],
 		featured: true,
 	},
 	{
@@ -35,6 +35,15 @@ const Projects = [
 		img: "/webexample/IPC/IF1.jpg",
 		description: "เว็บไซต์บริการซ่อมคอมพิวเตอร์ครบวงจร",
 		tech: ["Next.js", "Tailwind"],
+		featured: true,
+	},
+	{
+		href: "/aitravelitinerary",
+		label: "Online",
+		handle: "AI Travel Itinerary",
+		img: "/webexample/AITravel/A1.jpg",
+		description: "แอพวางแผนการเดินทางอัจฉริยะ ใช้ AI สร้างกำหนดการท่องเที่ยวส่วนบุคคล",
+		tech: ["Next.js", "Google Gemini API", "TypeScript"],
 		featured: true,
 	},
 	{

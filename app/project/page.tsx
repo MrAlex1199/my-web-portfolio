@@ -25,6 +25,15 @@ const Projects = [
 		featured: true,
 	},
 	{
+		href: "/aitravelitinerary",
+		label: "Online",
+		handle: "AI Travel Itinerary",
+		img: "/webexample/AITravel/A1.jpg",
+		description: "แอพวางแผนการเดินทางอัจฉริยะ ใช้ AI สร้างกำหนดการท่องเที่ยวส่วนบุคคล",
+		tech: ["Next.js", "Google Gemini API", "TypeScript"],
+		featured: true,
+	},
+	{
 		href: "/mywebecom",
 		label: "Online",
 		handle: "MY-Web-ECom",
