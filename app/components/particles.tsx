@@ -25,28 +25,61 @@ export default function Particles({
 	const mousePosition = useMousePosition();
 	const mouse = useRef<{ x: number; y: number }>({ x: 0, y: 0 });
 	const canvasSize = useRef<{ w: number; h: number }>({ w: 0, h: 0 });
-	const dpr = typeof window !== "undefined" ? window.devicePixelRatio : 1;
+	const dpr = useRef(1);
+	const rafId = useRef<number | null>(null);
+	const [isVisible, setIsVisible] = useState(false);
 
 	useEffect(() => {
-		if (canvasRef.current) {
-			context.current = canvasRef.current.getContext("2d");
+		if (typeof window !== "undefined") {
+			dpr.current = Math.min(window.devicePixelRatio || 1, 2); // Cap DPR at 2 for performance
 		}
-		initCanvas();
-		animate();
-		window.addEventListener("resize", initCanvas);
+
+		if (canvasRef.current) {
+			context.current = canvasRef.current.getContext("2d", { 
+				alpha: true,
+				desynchronized: true // Better performance for animations
+			});
+		}
+		
+		// Delay initialization slightly to prioritize initial page render
+		const timer = setTimeout(() => {
+			setIsVisible(true);
+			initCanvas();
+			animate();
+		}, 100);
+
+		const handleResize = () => {
+			// Debounce resize for better performance
+			if (rafId.current) {
+				cancelAnimationFrame(rafId.current);
+			}
+			rafId.current = requestAnimationFrame(() => {
+				initCanvas();
+			});
+		};
+
+		window.addEventListener("resize", handleResize, { passive: true });
 
 		return () => {
-			window.removeEventListener("resize", initCanvas);
+			clearTimeout(timer);
+			if (rafId.current) {
+				cancelAnimationFrame(rafId.current);
+			}
+			window.removeEventListener("resize", handleResize);
 		};
 	}, []);
 
 	useEffect(() => {
-		onMouseMove();
-	}, [mousePosition.x, mousePosition.y]);
+		if (isVisible) {
+			onMouseMove();
+		}
+	}, [mousePosition.x, mousePosition.y, isVisible]);
 
 	useEffect(() => {
-		initCanvas();
-	}, [refresh]);
+		if (isVisible) {
+			initCanvas();
+		}
+	}, [refresh, isVisible]);
 
 	const initCanvas = () => {
 		resizeCanvas();
@@ -85,11 +118,11 @@ export default function Particles({
 			circles.current.length = 0;
 			canvasSize.current.w = canvasContainerRef.current.offsetWidth;
 			canvasSize.current.h = canvasContainerRef.current.offsetHeight;
-			canvasRef.current.width = canvasSize.current.w * dpr;
-			canvasRef.current.height = canvasSize.current.h * dpr;
+			canvasRef.current.width = canvasSize.current.w * dpr.current;
+			canvasRef.current.height = canvasSize.current.h * dpr.current;
 			canvasRef.current.style.width = `${canvasSize.current.w}px`;
 			canvasRef.current.style.height = `${canvasSize.current.h}px`;
-			context.current.scale(dpr, dpr);
+			context.current.scale(dpr.current, dpr.current);
 		}
 	};
 
@@ -98,7 +131,7 @@ export default function Particles({
 		const y = Math.floor(Math.random() * canvasSize.current.h);
 		const translateX = 0;
 		const translateY = 0;
-		const size = Math.floor(Math.random() * 2) + 0.1;
+		const size = Math.random() * 2 + 0.2; // Slightly larger minimum size
 		const alpha = 0;
 		const targetAlpha = parseFloat((Math.random() * 0.6 + 0.1).toFixed(1));
 		const dx = (Math.random() - 0.5) * 0.2;
@@ -126,7 +159,7 @@ export default function Particles({
 			context.current.arc(x, y, size, 0, 2 * Math.PI);
 			context.current.fillStyle = `rgba(255, 255, 255, ${alpha})`;
 			context.current.fill();
-			context.current.setTransform(dpr, 0, 0, dpr, 0, 0);
+			context.current.setTransform(dpr.current, 0, 0, dpr.current, 0, 0);
 
 			if (!update) {
 				circles.current.push(circle);
@@ -223,11 +256,15 @@ export default function Particles({
 				);
 			}
 		});
-		window.requestAnimationFrame(animate);
+		rafId.current = window.requestAnimationFrame(animate);
 	};
 
 	return (
-		<div className={className} ref={canvasContainerRef} aria-hidden="true">
+		<div
+			className={`pointer-events-none ${className}`}
+			ref={canvasContainerRef}
+			aria-hidden="true"
+		>
 			<canvas ref={canvasRef} />
 		</div>
 	);

@@ -12,16 +12,19 @@ import {
 	Mail,
 	Code2,
 	Database,
-	Wrench,
 	Globe,
 	ChevronDown,
+	Sparkles,
+	Cloud,
+	Cpu,
+	Palette,
 } from "lucide-react";
 
 // Data
 const Projects = [
 	{
 		href: "/roversearch",
-		label: "Offline",
+		label: "Online",
 		handle: "ROVER-SEARCH",
 		img: "/webexample/Rover/R1.jpg",
 		description: "ระบบค้นหาข้อมูลอัจฉริยะ พร้อม UI ที่ทันสมัย",
@@ -35,10 +38,10 @@ const Projects = [
 		img: "/webexample/IPC/IF1.jpg",
 		description: "เว็บไซต์บริการซ่อมคอมพิวเตอร์ครบวงจร",
 		tech: ["Next.js", "Tailwind"],
-		featured: true,
+		featured: false,
 	},
 	{
-		href: "/aitravelitinerary",
+		href: "/aitravelitnerary",
 		label: "Online",
 		handle: "AI Travel Itinerary",
 		img: "/webexample/AITravel/A1.jpg",
@@ -100,59 +103,111 @@ const Projects = [
 		tech: ["React", "Styled Components"],
 		featured: false,
 	},
+	{
+		href: "/SmartRentShareOG",
+		label: "Online",
+		handle: "SmartRentShareOG",
+		img: "/webexample/SmartRentShareOG/01.jpg",
+		description: "แพลตฟอร์มให้เช่า-ยืมของระหว่างนักศึกษา ที่รองรับทั้ง LINE LIFF และ Web Browser",
+		tech: ["Next.js", "NestJS", "MongoDB"],
+		featured: true,
+	},
+	{
+		href: "/FixMate",
+		label: "In Development",
+		handle: "FixMate_AI",
+		img: "/webexample/FixMate/01.jpg",
+		description: "แอปพลิเคชั่นให้คำแนะนำการซ่อมรถยนต์และมอเตอร์ไซค์ด้วย AI แบบครบวงจร",
+		tech: ["Flutter", "AI Google Gemini API", "PostgreSQL", "Dart"],
+		featured: true,
+	}
 ];
 
 const skillCategories = [
-	{
-		title: "Frontend",
-		icon: <Globe className="w-5 h-5" />,
-		color: "from-blue-500 to-cyan-500",
-		skills: [
-			{ name: "HTML/CSS", level: 100 },
-			{ name: "TailwindCSS", level: 100 },
+    {
+        title: "Frontend",
+        icon: <Globe className="w-5 h-5" />,
+        color: "from-blue-500 to-cyan-500",
+        skills: [
+            { name: "React / Next.js", level: 100 },
+            { name: "TypeScript", level: 100 },
+            { name: "TailwindCSS", level: 100 },
+            { name: "HTML5 / CSS3", level: 100 },
+			{ name: "Flutter", level: 70 },
+        ],
+    },
+    {
+        title: "Backend",
+        icon: <Code2 className="w-5 h-5" />,
+        color: "from-purple-500 to-pink-500",
+        skills: [
+            { name: "Node.js / Express", level: 100 },
+            { name: "RESTful APIs Design", level: 100 },
 			{ name: "JavaScript", level: 100 },
-			{ name: "React", level: 90 },
-			{ name: "Next.js", level: 70 },
-			{ name: "TypeScript", level: 60 },
-		],
-	},
-	{
-		title: "Backend",
-		icon: <Code2 className="w-5 h-5" />,
-		color: "from-purple-500 to-pink-500",
-		skills: [
-			{ name: "Node.js", level: 80 },
-			{ name: "Express", level: 80 },
-			{ name: "EJS", level: 100 },
-			{ name: "API", level: 80 },
-		],
-	},
-	{
-		title: "Database",
-		icon: <Database className="w-5 h-5" />,
-		color: "from-green-500 to-emerald-500",
-		skills: [
-			{ name: "PostgreSQL", level: 90 },
-			{ name: "MongoDB", level: 90 },
-			{ name: "Firebase", level: 80 },
-		],
-	},
-	{
-		title: "Tools & Others",
-		icon: <Wrench className="w-5 h-5" />,
-		color: "from-orange-500 to-yellow-500",
-		skills: [
-			{ name: "Git", level: 80 },
-			{ name: "Bootstrap", level: 80 },
-			{ name: "jQuery", level: 80 },
-		],
-	},
+            { name: "EJS Templating", level: 100 },
+            { name: "Python (AI Scripting)", level: 80 },
+        ],
+    },
+    {
+        title: "Database",
+        icon: <Database className="w-5 h-5" />,
+        color: "from-green-500 to-emerald-500",
+        skills: [
+            { name: "PostgreSQL", level: 100 },
+            { name: "MongoDB", level: 100 },
+            { name: "Vector Databases", level: 85 },
+			{ name: "Redis (Caching)", level: 70 }
+        ],
+    },
+    {
+        title: "AI & Intelligent Systems",
+        icon: <Sparkles className="w-5 h-5" />,
+        color: "from-cyan-400 to-emerald-500",
+        skills: [
+            { name: "Prompt Engineering", level: 95 },
+            { name: "RAG Architecture", level: 85 },
+            { name: "Ollama / Local LLMs", level: 90 },
+            { name: "LangChain / CrewAI", level: 80 },
+        ],
+    },
+    {
+        title: "Cloud & Infrastructure",
+        icon: <Cloud className="w-5 h-5" />,
+        color: "from-yellow-500 to-yellow-600",
+        skills: [
+            { name: "Vercel / Railway / Render", level: 100 },
+            { name: "Supabase / Firebase", level: 95 },
+            { name: "Docker & Containers", level: 85 },
+            { name: "CI/CD & Git", level: 90 },
+        ],
+    },
+    {
+        title: "AI Productivity Tools",
+        icon: <Cpu className="w-5 h-5" />,
+        color: "from-indigo-500 to-purple-600",
+        skills: [
+            { name: "Cursor / Copilot / Antigravity / Windsurf", level: 100 },
+			{ name: "Claude / GPT Canvas / Google AI Studio / Grok AI / Claude Code", level: 95 },
+            { name: "v0.dev / Lovable / Leonardo.ai", level: 90 },
+			{ name: "Google Gemini API", level: 90},
+        ],
+    },
+    {
+        title: "Design & Creative",
+        icon: <Palette className="w-5 h-5" />,
+        color: "from-rose-500 to-orange-500",
+        skills: [
+            { name: "Figma", level: 90 },
+            { name: "Google Stitch", level: 90 },
+            { name: "Canva / Procreate", level: 90 },
+        ],
+    },
 ];
 
 const socials = [
 	{ icon: <Github className="w-5 h-5" />, href: "https://github.com/MrAlex1199", label: "GitHub" },
 	{ icon: <Linkedin className="w-5 h-5" />, href: "https://www.linkedin.com/in/krittapas-thipsangwong-6707a3319/", label: "LinkedIn" },
-	{ icon: <Mail className="w-5 h-5" />, href: "mailto:t57havytanks@gmail.com", label: "Email" },
+	{ icon: <Mail className="w-5 h-5" />, href: "mailto:krittapasthipsang@gmail.com", label: "Email" },
 ];
 
 const navItems = [
@@ -160,17 +215,6 @@ const navItems = [
 	{ href: "#projects", label: "Projects" },
 	{ href: "#about", label: "About" },
 ];
-
-// Animation variants
-const container = {
-	hidden: { opacity: 0 },
-	show: { opacity: 1, transition: { staggerChildren: 0.1 } },
-};
-
-const item = {
-	hidden: { opacity: 0, y: 20 },
-	show: { opacity: 1, y: 0 },
-};
 
 // Section wrapper with animation
 function Section({ children, id, className = "" }: { children: React.ReactNode; id: string; className?: string }) {
@@ -208,8 +252,21 @@ export default function Home() {
 			}
 		};
 
-		window.addEventListener("scroll", handleScroll);
-		return () => window.removeEventListener("scroll", handleScroll);
+		// Throttle scroll events for better performance
+		let rafId: number | null = null;
+		const throttledScroll = () => {
+			if (rafId) return;
+			rafId = requestAnimationFrame(() => {
+				handleScroll();
+				rafId = null;
+			});
+		};
+
+		window.addEventListener("scroll", throttledScroll, { passive: true });
+		return () => {
+			if (rafId) cancelAnimationFrame(rafId);
+			window.removeEventListener("scroll", throttledScroll);
+		};
 	}, []);
 
 	const scrollToSection = (href: string) => {
@@ -224,7 +281,7 @@ export default function Home() {
 
 	return (
 		<div className="relative bg-zinc-950">
-			{/* Fixed Navigation */}
+			{/* Navigation */}
 			<motion.nav
 				initial={{ y: -100 }}
 				animate={{ y: 0 }}
@@ -266,7 +323,7 @@ export default function Home() {
 			</motion.nav>
 
 			{/* Particles Background */}
-			<Particles className="fixed inset-0 -z-10" quantity={80} />
+			<Particles className="fixed inset-0 z-0 pointer-events-none" quantity={50} />
 
 			{/* Hero Section */}
 			<section
@@ -387,6 +444,8 @@ export default function Home() {
 													alt={project.handle}
 													width={800}
 													height={450}
+													sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 800px"
+													priority={index < 2}
 													className="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
 												/>
 												<div className="absolute inset-0 bg-gradient-to-t from-zinc-900 via-zinc-900/20 to-transparent opacity-60 group-hover:opacity-40 transition-opacity" />
@@ -443,6 +502,7 @@ export default function Home() {
 													alt={project.handle}
 													width={400}
 													height={250}
+													sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 400px"
 													className="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-105"
 												/>
 												<div className="absolute inset-0 bg-gradient-to-t from-zinc-900 via-transparent to-transparent opacity-70" />
@@ -579,6 +639,8 @@ export default function Home() {
 										<div className="relative">
 											<div className="absolute -left-[29px] w-4 h-4 rounded-full bg-gradient-to-r from-purple-500 to-pink-500"></div>
 											<span className="text-sm text-purple-400 font-medium">ปัจจุบัน</span>
+											<h4 className="text-lg font-semibold text-white mt-1">กำลังศึกษาที่มหาวิทยาลัยธุรกิจบัณฑิต</h4>
+											<p className="text-zinc-400 text-sm mt-1 mb-3">หลักสูตรเทคโนโลยีสารสนเทศ Information Systems for Digital Business</p>
 											<h4 className="text-lg font-semibold text-white mt-1">Full-Stack Web Developer</h4>
 											<p className="text-zinc-400 text-sm mt-1">กำลังพัฒนาทักษะและสร้างโปรเจกต์ใหม่ๆ</p>
 										</div>

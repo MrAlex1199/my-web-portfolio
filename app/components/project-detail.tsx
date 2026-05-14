@@ -46,7 +46,7 @@ export function ProjectDetail({
 				className="fixed top-0 inset-x-0 z-50 bg-zinc-900/80 backdrop-blur-md border-b border-zinc-800/50"
 			>
 				<div className="container mx-auto px-6 py-4 flex items-center justify-between max-w-6xl">
-					<Link href="/#projects">
+					<Link href="/">
 						<motion.button
 							whileHover={{ scale: 1.05 }}
 							whileTap={{ scale: 0.95 }}
@@ -137,6 +137,7 @@ export function ProjectDetail({
 										src={images[currentImage]}
 										alt={`${title} screenshot ${currentImage + 1}`}
 										fill
+										sizes="(max-width: 768px) 100vw, (max-width: 1200px) 90vw, 1200px"
 										className="object-cover"
 									/>
 								</motion.div>
@@ -196,6 +197,7 @@ export function ProjectDetail({
 										src={img}
 										alt={`Thumbnail ${index + 1}`}
 										fill
+										sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 20vw"
 										className="object-cover"
 									/>
 									{currentImage === index && (
@@ -235,6 +237,7 @@ export function ProjectDetail({
 								src={images[currentImage]}
 								alt={`${title} screenshot ${currentImage + 1}`}
 								fill
+								sizes="100vw"
 								className="object-contain"
 							/>
 						</div>
