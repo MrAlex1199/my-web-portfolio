@@ -6,7 +6,7 @@ import { Metadata } from "next";
 export const metadata: Metadata = {
   metadataBase: new URL('http://localhost:3000'),
   title: {
-    default: "Alex Portfolio",
+    default: "Krittapas Portfolio",
     template: "%s | Alex Portfolio",
   },
   description: "Alex Portfolio",
