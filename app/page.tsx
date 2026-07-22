@@ -23,12 +23,12 @@ import {
 // Data
 const Projects = [
 	{
-		href: "/roversearch",
+		href: "/cosmosapod",
 		label: "Online",
-		handle: "ROVER-SEARCH",
-		img: "/webexample/Rover/R1.jpg",
-		description: "ระบบค้นหาข้อมูลอัจฉริยะ พร้อม UI ที่ทันสมัย",
-		tech: ["React", "NASA API"],
+		handle: "COSMOS-APOD",
+		img: "/webexample/cosmosapod/R1.jpg",
+		description: "เว็บไซต์ค้นหารูปภาพจากนาซ่า",
+		tech: ["EJS", "Node.js", "Express", "NASA API", "TypeScript"],
 		featured: true,
 	},
 	{
