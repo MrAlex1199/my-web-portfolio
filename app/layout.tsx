@@ -7,20 +7,20 @@ export const metadata: Metadata = {
   metadataBase: new URL('http://localhost:3000'),
   title: {
     default: "Krittapas Portfolio",
-    template: "%s | Alex Portfolio",
+    template: "%s | Krittapas Portfolio",
   },
-  description: "Alex Portfolio",
+  description: "Krittapas Portfolio",
   openGraph: {
-    title: "Alex Burger",
+    title: "Krittapas Portfolio",
     description:
-      "Alex Portfolio",
+      "Krittapas Portfolio",
     url: "http://localhost:3000",
-    siteName: "Alex Portfolio",
+    siteName: "Krittapas Portfolio",
     locale: "en-US",
     type: "website",
   },
   icons: {
-    shortcut: "/favicon.jpg",
+    shortcut: "/favicon.png",
   },
 };
 
