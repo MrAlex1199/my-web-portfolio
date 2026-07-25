@@ -7,12 +7,12 @@ import { motion } from "framer-motion";
 
 const Projects = [
 	{
-		href: "/roversearch",
-		label: "Offline",
-		handle: "ROVER-SEARCH",
-		img: "/webexample/Rover/R1.jpg",
-		description: "ระบบค้นหาข้อมูลอัจฉริยะ พร้อม UI ที่ทันสมัย",
-		tech: ["React", "API", "Search"],
+		href: "/cosmosapod",
+		label: "Online",
+		handle: "COSMOS-APOD",
+		img: "/webexample/cosmosapod/R1.jpg",
+		description: "เว็บไซต์ค้นหารูปภาพจากนาซ่า",
+		tech: ["EJS", "Node.js", "Express", "NASA API", "TypeScript"],
 		featured: true,
 	},
 	{
@@ -25,7 +25,7 @@ const Projects = [
 		featured: true,
 	},
 	{
-		href: "/aitravelitinerary",
+		href: "/aitravelitnerary",
 		label: "Online",
 		handle: "AI Travel Itinerary",
 		img: "/webexample/AITravel/A1.jpg",
