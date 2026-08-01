@@ -546,9 +546,11 @@ export default function Home() {
 						<div className="relative inline-block mb-6">
 							<div className="w-32 h-32 rounded-full bg-gradient-to-r from-purple-500 via-pink-500 to-cyan-500 p-1">
 								<div className="w-full h-full rounded-full bg-zinc-900 flex items-center justify-center">
-									<span className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">
-										KT
-									</span>
+									<img
+										src="/favicon.png"
+										alt="Profile"
+										className="w-full h-full object-cover rounded-full"
+									/>
 								</div>
 							</div>
 							<span className="absolute bottom-2 right-2 w-4 h-4 bg-green-500 rounded-full border-2 border-zinc-900"></span>
