@@ -7,8 +7,6 @@ const nextConfig = {
   },
   // Enable React strict mode for better performance warnings
   reactStrictMode: true,
-  // Optimize production builds
-  swcMinify: true,
   // Reduce bundle size
   compiler: {
     removeConsole: process.env.NODE_ENV === 'production',

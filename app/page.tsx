@@ -18,6 +18,7 @@ import {
 	Cloud,
 	Cpu,
 	Palette,
+	Download,
 } from "lucide-react";
 
 // Data
@@ -297,27 +298,39 @@ export default function Home() {
 					>
 						KT
 					</motion.span>
-					<div className="flex items-center gap-1 p-1 rounded-full bg-zinc-800/50">
-						{navItems.map((navItem) => (
-							<button
-								key={navItem.href}
-								onClick={() => scrollToSection(navItem.href)}
-								className={`relative px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 ${
-									activeSection === navItem.href.slice(1)
-										? "text-white"
-										: "text-zinc-400 hover:text-zinc-200"
-								}`}
-							>
-								{activeSection === navItem.href.slice(1) && (
-									<motion.div
-										layoutId="nav-active"
-										className="absolute inset-0 rounded-full bg-gradient-to-r from-purple-600/80 to-pink-600/80"
-										transition={{ type: "spring", stiffness: 380, damping: 30 }}
-									/>
-								)}
-								<span className="relative z-10">{navItem.label}</span>
-							</button>
-						))}
+					<div className="flex items-center gap-3">
+						<div className="flex items-center gap-1 p-1 rounded-full bg-zinc-800/50">
+							{navItems.map((navItem) => (
+								<button
+									key={navItem.href}
+									onClick={() => scrollToSection(navItem.href)}
+									className={`relative px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 ${
+										activeSection === navItem.href.slice(1)
+											? "text-white"
+											: "text-zinc-400 hover:text-zinc-200"
+									}`}
+								>
+									{activeSection === navItem.href.slice(1) && (
+										<motion.div
+											layoutId="nav-active"
+											className="absolute inset-0 rounded-full bg-gradient-to-r from-purple-600/80 to-pink-600/80"
+											transition={{ type: "spring", stiffness: 380, damping: 30 }}
+										/>
+									)}
+									<span className="relative z-10">{navItem.label}</span>
+								</button>
+							))}
+						</div>
+						<motion.a
+							href="/resume/Krittapas_Resume.pdf"
+							download="Krittapas_Resume.pdf"
+							whileHover={{ scale: 1.05 }}
+							whileTap={{ scale: 0.95 }}
+							className="flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-purple-600 to-pink-600 text-white text-sm font-medium hover:shadow-lg hover:shadow-purple-500/25 transition-all duration-300 group"
+						>
+							<Download className="w-3.5 h-3.5 group-hover:animate-bounce" />
+							<span className="hidden sm:inline">Resume</span>
+						</motion.a>
 					</div>
 				</div>
 			</motion.nav>
@@ -373,6 +386,7 @@ export default function Home() {
 							เกี่ยวกับผม
 						</motion.button>
 					</div>
+
 
 					<div className="flex justify-center gap-4 mt-12">
 						{socials.map((social, index) => (
@@ -583,6 +597,18 @@ export default function Home() {
 								</motion.a>
 							))}
 						</div>
+
+						{/* Download Resume Button */}
+						<motion.a
+							href="/resume/Krittapas_Resume.pdf"
+							download="Krittapas_Resume.pdf"
+							whileHover={{ scale: 1.05, y: -2 }}
+							whileTap={{ scale: 0.95 }}
+							className="inline-flex items-center gap-2 mt-6 px-6 py-3 rounded-full bg-gradient-to-r from-purple-600 to-pink-600 text-white font-medium hover:shadow-lg hover:shadow-purple-500/25 transition-all duration-300 group"
+						>
+							<Download className="w-4 h-4 group-hover:animate-bounce" />
+							Download Resume
+						</motion.a>
 					</div>
 
 					{/* Skills */}
