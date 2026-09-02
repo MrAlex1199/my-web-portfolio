@@ -1,5 +1,6 @@
 "use client";
-import { Github, Mail, Linkedin, Code2, Database, Wrench, Globe } from "lucide-react";
+import React, { useState } from "react";
+import { Github, Mail, Linkedin, Code2, Database, Wrench, Globe, Download, QrCode, ExternalLink, Sparkles } from "lucide-react";
 import Link from "next/link";
 import { Navigation } from "../components/nav";
 import { Card } from "../components/card";
@@ -87,6 +88,8 @@ const item = {
 };
 
 export default function About() {
+	const [showQr, setShowQr] = useState(false);
+
 	return (
 		<div className="min-h-screen bg-gradient-to-tl from-zinc-900/0 via-zinc-900 to-zinc-900/0">
 			<Navigation />
@@ -137,6 +140,74 @@ export default function About() {
 							</Link>
 						))}
 					</div>
+
+					{/* Actions: Download Resume & Portfolio QR Code */}
+					<div className="flex flex-wrap items-center justify-center gap-4 mt-6">
+						<motion.a
+							href="/resume/Krittapas_Resume.pdf"
+							download="Krittapas_Resume.pdf"
+							whileHover={{ scale: 1.05, y: -2 }}
+							whileTap={{ scale: 0.95 }}
+							className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-gradient-to-r from-purple-600 to-pink-600 text-white font-medium hover:shadow-lg hover:shadow-purple-500/25 transition-all duration-300 group"
+						>
+							<Download className="w-4 h-4 group-hover:animate-bounce" />
+							Download Resume
+						</motion.a>
+
+						<motion.button
+							type="button"
+							onClick={() => setShowQr(!showQr)}
+							whileHover={{ scale: 1.05, y: -2 }}
+							whileTap={{ scale: 0.95 }}
+							className={`inline-flex items-center gap-2 px-6 py-3 rounded-full border font-medium transition-all duration-300 ${
+								showQr
+									? "border-purple-500/80 bg-purple-500/20 text-white shadow-lg shadow-purple-500/20"
+									: "border-zinc-700 bg-zinc-800/60 text-zinc-300 hover:bg-zinc-700/60 hover:text-white hover:border-zinc-500"
+							}`}
+						>
+							<QrCode className="w-4 h-4 text-purple-400" />
+							<span>{showQr ? "ซ่อน QR Code" : "Portfolio QR Code"}</span>
+						</motion.button>
+					</div>
+
+					{/* QR Code Card */}
+					{showQr && (
+						<motion.div
+							initial={{ opacity: 0, scale: 0.9, y: 10 }}
+							animate={{ opacity: 1, scale: 1, y: 0 }}
+							transition={{ duration: 0.3 }}
+							className="mt-8 flex justify-center"
+						>
+							<div className="relative p-6 rounded-2xl bg-zinc-900/90 border border-zinc-800 backdrop-blur-xl shadow-2xl max-w-xs w-full flex flex-col items-center">
+								<div className="absolute -top-3 px-3 py-0.5 rounded-full bg-gradient-to-r from-purple-600 to-pink-600 text-[11px] font-medium text-white shadow-sm flex items-center gap-1">
+									<Sparkles className="w-3 h-3" />
+									<span>Scan on Mobile</span>
+								</div>
+
+								<div className="p-3 bg-white rounded-xl shadow-inner mt-2 mb-4">
+									<img
+										src="/portfolio-qr.svg"
+										alt="Portfolio QR Code"
+										className="w-44 h-44 object-contain rounded-lg"
+									/>
+								</div>
+
+								<p className="text-zinc-200 text-sm font-medium text-center">
+									สแกนเพื่อเข้าชมเว็บบนมือถือ
+								</p>
+
+								<a
+									href="https://my-web-portfolio-beta.vercel.app/"
+									target="_blank"
+									rel="noopener noreferrer"
+									className="mt-2 text-xs text-purple-400 hover:text-purple-300 flex items-center gap-1 transition-colors break-all text-center"
+								>
+									<span>my-web-portfolio-beta.vercel.app</span>
+									<ExternalLink className="w-3 h-3 shrink-0" />
+								</a>
+							</div>
+						</motion.div>
+					)}
 				</motion.div>
 
 				{/* Skills Section */}
